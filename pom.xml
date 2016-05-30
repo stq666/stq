@@ -22,9 +22,14 @@
     <!--properties-->
     <properties>
         <servlet_version>2.5</servlet_version>
-        <shiro-version>1.2.5</shiro-version>
+        <shiro_version>1.2.5</shiro_version>
         <commons_lang_version>2.6</commons_lang_version>
+        <junit_version>4.7</junit_version>
+        <commons_logging_version>1.2</commons_logging_version>
+        <log4j_version>1.2.17</log4j_version>
+        <maven_jar_plugin_version>2.4</maven_jar_plugin_version>
     </properties>
+
     <!--dependencyManagement-->
     <dependencyManagement>
         <dependencies>
@@ -44,12 +49,89 @@
                 <artifactId>commons-lang</artifactId>
                 <version>${commons_lang_version}</version>
             </dependency>
+
+            <!--log-->
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons_logging_version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>avalon-framework</groupId>
+                        <artifactId>avalon-framework</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>logkit</groupId>
+                        <artifactId>logkit</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j_version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>mail</artifactId>
+                        <groupId>javax.mail</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jms</artifactId>
+                        <groupId>javax.jms</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jmxtools</artifactId>
+                        <groupId>com.sun.jdmk</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jmxri</artifactId>
+                        <groupId>com.sun.jmx</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!--test-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit_version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!--build-->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven_jar_plugin_version}</version>
+                    <configuration>
+                        <archive>
+                            <index>true</index>
+                            <compress>true</compress>
+                        </archive>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
     <!--profiles-->
     <profiles>
         <profile>
             <id>dev</id>
+
         </profile>
         <profile>
             <id>test</id>
@@ -58,5 +140,13 @@
             <id>product</id>
         </profile>
     </profiles>
+
+    <developers>
+        <developer>
+            <id>1</id>
+            <name>stq</name>
+            <url>stqsht@163.com</url>
+        </developer>
+    </developers>
 
 </project>
