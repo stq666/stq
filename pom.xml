@@ -22,7 +22,8 @@
     <!--properties-->
     <properties>
         <servlet_version>2.5</servlet_version>
-        <shiro_version>1.2.5</shiro_version>
+        <shiro-version>1.2.5</shiro-version>
+        <commons_lang_version>2.6</commons_lang_version>
     </properties>
     <!--dependencyManagement-->
     <dependencyManagement>
@@ -37,6 +38,11 @@
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
                 <version>${shiro_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons_lang_version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

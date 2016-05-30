@@ -10,11 +10,5 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>stq-shiro</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-core</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>
