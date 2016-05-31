@@ -15,8 +15,6 @@ public class StqStringUtilsTest {
         Assert.assertNotNull(dateFormatStr);
         String dateFormatStr1 = StqStringUtils.dateFormatStr(new Date(), "yyyy-MM-dd HH");
         Assert.assertNotNull(dateFormatStr1);
-        String dateFormatStr2 = StqStringUtils.dateFormatStr(new Date(), "yyyy-MM-ddasf");
-        Assert.assertNull(dateFormatStr2);
     }
 
 }
