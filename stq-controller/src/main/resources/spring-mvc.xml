@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+
+    <!--springmvc的配置信息-->
+
+    <!--第一步：配置需要扫描的包-->
+    <context:component-scan base-package="com.stq.controller"/>
+    <!--
+    第二步：配置处理器映射器和处理器适配器，
+    注：此配置有一个简写的配置：<mvc:annotation-driven/>
+       这种方式会自动将DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter进行注入，
+
+    -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="com.stq.utils.MyMappingJackson2HttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/p</value>
+                        <value>application/json</value>
+                        <value>text/html</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!--第三步：配置视图解析器-->
+
+</beans>

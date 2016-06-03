@@ -18,6 +18,7 @@
         <module>stq-common</module>
         <module>stq-shiro</module>
         <module>stq-redis</module>
+        <module>stq-controller</module>
     </modules>
     <!--properties-->
     <properties>
@@ -28,6 +29,7 @@
         <commons_logging_version>1.2</commons_logging_version>
         <log4j_version>1.2.17</log4j_version>
         <maven_jar_plugin_version>2.4</maven_jar_plugin_version>
+        <spring_version>3.2.8.RELEASE</spring_version>
     </properties>
 
     <!--dependencyManagement-->
@@ -97,6 +99,55 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
+            <!--spring-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jms</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring_version}</version>
+            </dependency>
+
+
 
             <!--test-->
             <dependency>
