@@ -20,6 +20,7 @@
         <module>stq-redis</module>
         <module>stq-controller</module>
         <module>stq-model</module>
+        <module>stq-dao</module>
     </modules>
     <!--properties-->
     <properties>
