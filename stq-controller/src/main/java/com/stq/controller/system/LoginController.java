@@ -33,6 +33,7 @@ public class LoginController {
      * @param response
      * @return
      */
+    @RequestMapping("/login")
     public @ResponseBody JSONObject login(@ModelAttribute SysUserVo vo,HttpServletRequest request,HttpServletResponse response){
         JSONObject result=null;
         try {
@@ -62,6 +63,7 @@ public class LoginController {
      * 退出登录
      * @return
      */
+    @RequestMapping("/logout")
     public @ResponseBody JSONObject logout(){
         JSONObject result=null;
         try{
