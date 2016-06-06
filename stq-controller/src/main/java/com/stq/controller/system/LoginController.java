@@ -1,9 +1,13 @@
 package com.stq.controller.system;
 
 import com.alibaba.fastjson.JSONObject;
+import com.stq.constant.ConstantElement;
+import com.stq.model.SysUser;
+import com.stq.realm.service.security.StqSecurityUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,7 +23,8 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginController {
     private static final Log log = LogFactory.getLog(LoginController.class);
 
-    public @ResponseBody JSONObject login(HttpServletRequest request,HttpServletResponse response){
+    public @ResponseBody JSONObject login(@ModelAttribute SysUser user,HttpServletRequest request,HttpServletResponse response){
+        SysUser login = StqSecurityUtil.login(user, ConstantElement.SESSIONKEY, user.getLoginName(), user.getPassword(),false);
         return null;
     }
 

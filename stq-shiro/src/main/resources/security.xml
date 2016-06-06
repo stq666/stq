@@ -56,7 +56,7 @@
     </bean>
     <!--会话的DAO-->
     <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO" />
-    <!--会话cookie模板-->
+    <!--会话cookie模板,sessionIdCookie用于生产sessionId,cookie模板-->
     <bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
         <constructor-arg value="sid"/>
         <property name="httpOnly" value="true"/>
