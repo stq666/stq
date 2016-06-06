@@ -21,6 +21,8 @@
         <module>stq-controller</module>
         <module>stq-model</module>
         <module>stq-dao</module>
+        <module>stq-serviceApi</module>
+        <module>stq-service</module>
     </modules>
     <!--properties-->
     <properties>
