@@ -36,7 +36,7 @@ public class LoginController {
     public @ResponseBody JSONObject login(@ModelAttribute SysUserVo vo,HttpServletRequest request,HttpServletResponse response){
         JSONObject result=null;
         try {
-            Map<String,Object>map = StqSecurityUtil.login(ConstantElement.SESSIONKEY, vo.getLoginName(), vo.getPassword(),false);
+            Map<String,Object>map = StqSecurityUtil.login(ConstantElement.SESSIONKEY, vo.getLoginName(), vo.getPassword(),vo.isRemeberMe());
             if(map!=null && map.size()>0){
                 boolean sessionIsInvalid = Boolean.valueOf(String.valueOf(map.get(ConstantElement.SESSIONISINVALID)));
                 if(sessionIsInvalid){//没有失效
