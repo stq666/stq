@@ -59,7 +59,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.26</version>
+                        <version>${mysql_connector_java_version}</version>
                     </dependency>
                     <dependency>
                         <groupId>org.freemarker</groupId>
