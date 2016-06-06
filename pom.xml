@@ -47,9 +47,20 @@
                 <artifactId>servlet-api</artifactId>
                 <version>${servlet_version}</version>
             </dependency>
+            <!--shiro-->
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
+                <version>${shiro_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-web</artifactId>
                 <version>${shiro_version}</version>
             </dependency>
             <dependency>
