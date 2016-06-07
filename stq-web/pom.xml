@@ -27,6 +27,7 @@
             <id>dev</id>
             <properties>
                 <env>dev</env>
+
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault><!--默认启用的是dev环境配置-->

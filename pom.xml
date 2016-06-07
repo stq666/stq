@@ -36,6 +36,7 @@
         <maven_jar_plugin_version>2.4</maven_jar_plugin_version>
         <spring_version>3.2.8.RELEASE</spring_version>
         <fastjson_version>1.1.39</fastjson_version>
+        <jackson_databind_version>2.1.4</jackson_databind_version>
     </properties>
 
     <!--dependencyManagement-->
@@ -121,6 +122,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson_databind_version}</version>
             </dependency>
             <!--spring-->
             <dependency>
