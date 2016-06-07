@@ -16,13 +16,13 @@
     <!--modules-->
     <modules>
         <module>stq-common</module>
+        <module>stq-model</module>
         <module>stq-shiro</module>
         <module>stq-redis</module>
-        <module>stq-controller</module>
-        <module>stq-model</module>
         <module>stq-dao</module>
         <module>stq-serviceApi</module>
         <module>stq-service</module>
+        <module>stq-controller</module>
         <module>stq-web</module>
     </modules>
     <!--properties-->
@@ -199,21 +199,6 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <!--profiles-->
-    <profiles>
-        <profile>
-            <id>dev</id>
-
-        </profile>
-        <profile>
-            <id>test</id>
-        </profile>
-        <profile>
-            <id>product</id>
-        </profile>
-    </profiles>
-
     <developers>
         <developer>
             <id>1</id>

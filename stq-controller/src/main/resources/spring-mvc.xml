@@ -14,7 +14,8 @@
     <!--
     第二步：配置处理器映射器和处理器适配器，
     注：此配置有一个简写的配置：<mvc:annotation-driven/>
-       这种方式会自动将DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter进行注入，
+       在springmvc3.1版本:默认配置DefaultAnnotationHandlerMapping、AnnotationMethodHandlerAdapter、AnnotationMethodHandlerExceptionResolver。
+       但在springmvc3.2版本：默认配置RequestMappingHandlerMapping、RequestMappingHandlerAdapter、ExceptionHandlerExceptionResolver
 
     -->
     <mvc:annotation-driven>
@@ -56,7 +57,7 @@
         <property name="defaultEncoding" value="utf-8"></property>
     </bean>
 
-    <!--配置静态资源-->
+    <!--配置静态资源，将不进行拦截-->
     <!--<mvc:resources mapping="/img/**" location="/fonts/" cache-period="31556926" />-->
 
     <!--配置拦截器-->
