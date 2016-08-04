@@ -24,6 +24,7 @@
         <module>stq-service</module>
         <module>stq-controller</module>
         <module>stq-web</module>
+        <module>stq-zookeeper</module>
     </modules>
     <!--properties-->
     <properties>
@@ -40,6 +41,9 @@
         <jedis_version>2.8.1</jedis_version>
         <commons_pool2_version>2.4.2</commons_pool2_version>
         <httpclient_version>4.5.2</httpclient_version>
+        <zookeeper_version>3.4.6</zookeeper_version>
+        <zkclient_version>0.1</zkclient_version>
+        <curator_framework_version>3.2.0</curator_framework_version>
     </properties>
 
     <!--dependencyManagement-->
@@ -193,6 +197,22 @@
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
                 <version>${httpclient_version}</version>
+            </dependency>
+            <!--zookeeper-->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator_framework_version}</version>
             </dependency>
 
 
