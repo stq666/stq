@@ -91,8 +91,6 @@ public class ChanageMapperNamePlugin extends PluginAdapter {
 
         return super.contextGenerateAdditionalJavaFiles(introspectedTable);
     }
-
-    @Override
     public boolean validate(List<String> warnings) {
         return true;
     }
