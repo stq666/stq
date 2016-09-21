@@ -14,6 +14,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.stq</groupId>
             <artifactId>stq-model</artifactId>
             <version>1.0-SNAPSHOT</version>
