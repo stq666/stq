@@ -9,4 +9,7 @@
         第二种：手动引入，目前用这种方法
     -->
 	<!--<import resource="config/*.xml" />-->
+    <bean id="aaa" class="com.stq.controller.system.MyBeanPostProcessor"/>
+    <bean id="hello" class="com.stq.controller.system.HelloWord">
+    </bean>
 </beans>

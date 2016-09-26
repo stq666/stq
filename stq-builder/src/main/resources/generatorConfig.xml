@@ -7,11 +7,10 @@
 <generatorConfiguration>
     <!--<classPathEntry location=""/>-->
     <context id="stq" targetRuntime="MyBatis3Simple">
-
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
-        <!--<plugin type="com.stq.mybatisgenerator.ChanageMapperNamePlugin"/>-->
-        <!--<plugin type="com.stq.mybatisgenerator.MysqlPagingPlugin"/>-->
+        <plugin type="com.stq.mybatisgenerator.ChanageMapperNamePlugin"/>
+        <plugin type="com.stq.mybatisgenerator.MysqlPagingPlugin"/>
 
 
         <commentGenerator>
@@ -20,7 +19,7 @@
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/stq?useUnicode=true&amp;characterEncoding=utf-8"
-                        userId="root" password="root"/>
+                        userId="root" password="123"/>
 
 
         <!-- 指定生成的类型为java类型，避免数据库中number等类型字段 -->

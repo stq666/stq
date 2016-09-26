@@ -15,16 +15,13 @@
     </organization>
     <!--modules-->
     <modules>
-        <module>stq-common</module>
         <module>stq-model</module>
-        <module>stq-shiro</module>
         <module>stq-redis</module>
         <module>stq-dao</module>
         <module>stq-serviceApi</module>
         <module>stq-service</module>
         <module>stq-controller</module>
         <module>stq-web</module>
-        <module>stq-zookeeper</module>
     </modules>
     <!--properties-->
     <properties>
@@ -57,7 +54,7 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
-                <version>${servlet_version}</version>
+                <version>${servlet.version}</version>
             </dependency>
             <!--shiro-->
             <dependency>
