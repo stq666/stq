@@ -15,6 +15,7 @@
     </organization>
     <!--modules-->
     <modules>
+        <module>stq-framework</module>
         <module>stq-model</module>
         <module>stq-redis</module>
         <module>stq-dao</module>
