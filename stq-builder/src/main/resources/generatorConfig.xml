@@ -5,14 +5,10 @@
 
 
 <generatorConfiguration>
-    <!--<classPathEntry location=""/>-->
     <context id="stq" targetRuntime="MyBatis3Simple">
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
-        <plugin type="com.stq.mybatisgenerator.ChanageMapperNamePlugin"/>
-        <plugin type="com.stq.mybatisgenerator.MysqlPagingPlugin"/>
-
-
+        <plugin type="com.stq.framework.mybatisgen.ChanageMapperNamePlugin"/>
         <commentGenerator>
             <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->
         </commentGenerator>
@@ -41,6 +37,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <table tableName="sys_user" domainObjectName="SysUser"/>
+        <table tableName="sys_permission" domainObjectName="SysRole"/>
 
 
     </context>

@@ -1,4 +1,4 @@
-package com.stq.mybatisgenerator;
+package com.stq.framework.mybatisgen;
 
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
@@ -20,7 +20,7 @@ import java.util.Map;
  * Created by newroc on 13-11-24.
  */
 public class ChanageMapperNamePlugin extends PluginAdapter {
-    private Log log = LogFactory.getLog(ChanageMapperNamePlugin.class);
+    Log log = LogFactory.getLog(ChanageMapperNamePlugin.class);
 
     @Override
     public void initialized(IntrospectedTable table) {
@@ -60,6 +60,7 @@ public class ChanageMapperNamePlugin extends PluginAdapter {
         String targetPackage = this.getContext().getJavaClientGeneratorConfiguration().getTargetPackage();
         String targetProject = this.getContext().getJavaClientGeneratorConfiguration().getTargetProject();
         String filePath = targetProject + "/" + targetPackage.replaceAll("\\.", "/") + "/" + root.get("javaClassName") + ".java";
+        log.info("文件地址：：："+filePath);
         File file = new File(filePath);
         if (file.exists()) {
             log.warn(file.getAbsoluteFile() + "已经存在,跳过.");
@@ -91,6 +92,7 @@ public class ChanageMapperNamePlugin extends PluginAdapter {
 
         return super.contextGenerateAdditionalJavaFiles(introspectedTable);
     }
+
     public boolean validate(List<String> warnings) {
         return true;
     }

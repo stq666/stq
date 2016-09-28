@@ -1,4 +1,4 @@
-package com.stq.mybatisgenerator;
+package com.stq.framework.mybatisgen;
 
 import org.mybatis.generator.api.CommentGenerator;
 import org.mybatis.generator.api.IntrospectedTable;
@@ -11,7 +11,6 @@ import org.mybatis.generator.api.dom.xml.XmlElement;
 import java.util.List;
 
 /**
- * mybatis代码生成器
  * Created by newroc on 13-11-24.
  */
 public class MysqlPagingPlugin extends PluginAdapter {
