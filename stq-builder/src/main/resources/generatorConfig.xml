@@ -37,7 +37,10 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <table tableName="sys_user" domainObjectName="SysUser"/>
-        <table tableName="sys_permission" domainObjectName="SysRole"/>
+        <table tableName="sys_role" domainObjectName="SysRole"/>
+        <table tableName="sys_permission" domainObjectName="SysPermission"/>
+        <table tableName="sys_role_user" domainObjectName="SysRoleUser"/>
+        <table tableName="sys_role_permission" domainObjectName="SysRolePermission"/>
 
 
     </context>
