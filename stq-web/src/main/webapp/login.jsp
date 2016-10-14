@@ -11,11 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-　　　<form action="/stq/stq/login" method="post">
-    用户名:<input type="text" id="loginName" name="loginName"/><br/>
-    密码:<input type="text" id="password" name="password"/><br/>
-    <input type="submit" value="登陆"/>
-</form>
+　　　<form action="/stq/login" method="post">
+        <input type="text" id="loginName" name="loginName"/><br/>
+        <input type="text" id="password" name="password"/><br/>
+        <button type="submit" value="登陆"/>
+     </form>
 
 </body>
 </html>

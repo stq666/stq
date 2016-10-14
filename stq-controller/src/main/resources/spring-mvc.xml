@@ -19,17 +19,17 @@
 
     -->
     <mvc:annotation-driven>
-        <mvc:message-converters>
-            <bean class="com.stq.utils.MyMappingJackson2HttpMessageConverter">
-                <property name="supportedMediaTypes">
-                    <list>
-                        <value>application/p</value>
-                        <value>application/json</value>
-                        <value>text/html</value>
-                    </list>
-                </property>
-            </bean>
-        </mvc:message-converters>
+        <!--<mvc:message-converters>-->
+            <!--<bean class="com.stq.utils.MyMappingJackson2HttpMessageConverter">-->
+                <!--<property name="supportedMediaTypes">-->
+                    <!--<list>-->
+                        <!--<value>application/p</value>-->
+                        <!--<value>application/json</value>-->
+                        <!--<value>text/html</value>-->
+                    <!--</list>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</mvc:message-converters>-->
     </mvc:annotation-driven>
 
     <!--第三步：配置视图解析器-->
@@ -51,11 +51,11 @@
         </property>
     </bean>
     <!--用Spring CommonsMultipartResolver 上传文件 -->
-    <bean id="multipartResolver"
-          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="1024000"></property>
-        <property name="defaultEncoding" value="utf-8"></property>
-    </bean>
+    <!--<bean id="multipartResolver"-->
+          <!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+        <!--<property name="maxUploadSize" value="1024000"></property>-->
+        <!--<property name="defaultEncoding" value="utf-8"></property>-->
+    <!--</bean>-->
 
     <!--配置静态资源，将不进行拦截-->
     <!--<mvc:resources mapping="/img/**" location="/fonts/" cache-period="31556926" />-->
